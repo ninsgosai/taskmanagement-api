@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "de4e2efa-7ab5-4a8c-9bd1-2b5d7990a889",
+		"name": "Flask App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Apis",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"Abc@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"Abc@1234\",\r\n    // \"user_type\": \"admin\"\r\n    \"name\": \"staff\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/admin/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Staff User Dashboard",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"Abc@1234\",\r\n    // \"user_type\": \"admin\"\r\n    \"name\": \"staff\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/staff/dashboard"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Staff User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"staff1@gmail.com\",\r\n    \"password\":\"Abc@1234\",\r\n    \"user_type\": \"staff\",\r\n    \"name\": \"staff\",\r\n    \"is_blocked\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/admin/staff-users"
+					},
+					"response": []
+				},
+				{
+					"name": "Block Staff User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"staff1@gmail.com\",\r\n    \"password\":\"Abc@1234\",\r\n    \"user_type\": \"staff\",\r\n    \"name\": \"staff\",\r\n    \"is_blocked\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/admin/staff-users/1/block"
+					},
+					"response": []
+				},
+				{
+					"name": "UnBlock Staff User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"staff1@gmail.com\",\r\n    \"password\":\"Abc@1234\",\r\n    \"user_type\": \"staff\",\r\n    \"name\": \"staff\",\r\n    \"is_blocked\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/admin/staff-users/1/unblock"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Staff User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"staff1@gmail.com\",\r\n    \"password\":\"Abc@1234\",\r\n    \"user_type\": \"staff\",\r\n    \"name\": \"staff\",\r\n    \"is_blocked\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/admin/staff-users/2"
+					},
+					"response": []
+				},
+				{
+					"name": "EditStaff User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"staff3@gmail.com\",\r\n    \"password\":\"Abc@1234\",\r\n    \"user_type\": \"staff\",\r\n    \"name\": \"staff\",\r\n    \"is_blocked\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/admin/staff-users/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"2323\",\r\n    \"description\":\"Test\",\r\n    \"assigned_staff_id\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/tickets"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Ticket",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"staff11\",\r\n    \"description\":\"Test\",\r\n    \"assigned_staff_id\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/tickets/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Archive Tickets",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"staff11\",\r\n    \"description\":\"Test\",\r\n    \"assigned_staff_id\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/tickets/archive"
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Ticket Attachments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/ninad/OneDrive/Desktop/ganesh.py"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/tickets/1/attachments"
+					},
+					"response": []
+				},
+				{
+					"name": "View All Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/ninad/OneDrive/Desktop/ganesh.py"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/admin/users"
+					},
+					"response": []
+				},
+				{
+					"name": "View All Tickets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/ninad/OneDrive/Desktop/ganesh.py"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/admin/tickets"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
